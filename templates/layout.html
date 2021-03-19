@@ -3,28 +3,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="icon" href="{% static 'favicon/favicon.ico' %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chango&family=IBM+Plex+Sans:wght@500&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <title>{% block title %}{% endblock %}</title>
     {% block styles %} {% endblock %}
-
 </head>
 <body>
-    <header>
-        <h1 class="page-title">Welcome to SellYourTing</h1>
-        <p>Here you can sell whatever you want at no charge</p>
-    </header>
+    <div class="main-container">
+        <header class="head-title">
+            <h1>Welcome to SellYourTing</h1>
+            <p>Here you can sell whatever you want at no charge</p>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="{% url 'sell:home' %}">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-    </nav>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="{% url 'sell:home' %}">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </div>
     {% block content %} {% endblock %}
 
-{% block script %} {% endblock %}
+<script src="{% static 'js/main.js' %}"></script>
+{% block script %}{% endblock %}
 </body>
 </html>
