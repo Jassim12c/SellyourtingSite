@@ -3,12 +3,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="icon" href="{% static 'favicon/favicon.ico' %}">
-    <title>Home</title>
+    <title>{% block title %}{% endblock %}</title>
+    {% block styles %} {% endblock %}
+
 </head>
 <body>
-    <h3>:)</h3>
+    <header>
+        <h1 class="page-title">Welcome to SellYourTing</h1>
+        <p>Here you can sell whatever you want at no charge</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'sell:home' %}">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    {% block content %} {% endblock %}
+
+{% block script %} {% endblock %}
 </body>
 </html>
