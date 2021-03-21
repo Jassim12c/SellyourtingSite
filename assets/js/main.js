@@ -10,15 +10,18 @@ x.innerHTML = "X";
 btn.addEventListener('click', ()=>{
     displayNoneShow.style.display = "block";
     nav.classList.add('animated');
-    nav.classList.add('slideInRight');
+    nav.classList.add('slideInLeft');
     mainNav.style.backgroundColor = "rgb(255, 255, 255, 0.2)";
     mainNav.replaceChild(x, btn);
+    header.style.marginLeft = "10px";
+    nav.classList.remove('slideOutLeft');
 })
 
 x.addEventListener('click', () => {
-    displayNoneShow.style.display = "none";
-    x.classList.add('animated');
-    x.classList.add('slideInLeft');
+    nav.classList.remove('slideInLeft');
     mainNav.style.background = "none";
     mainNav.replaceChild(btn, x);
+    nav.classList.add('animated');
+    nav.classList.add('slideOutLeft');
+    header.style.marginLeft = "-10px";
 })

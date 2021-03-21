@@ -10,10 +10,10 @@ button{
 
 /* || ANIMATIONS || */
 
-@-webkit-keyframes slideInRight {
+@-webkit-keyframes slideInLeft {
   from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
     visibility: visible;
   }
 
@@ -23,10 +23,10 @@ button{
   }
 }
 
-@keyframes slideInRight {
+@keyframes slideInLeft {
   from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
     visibility: visible;
   }
 
@@ -36,9 +36,35 @@ button{
   }
 }
 
-.slideInRight {
-  -webkit-animation-name: slideInRight;
-  animation-name: slideInRight;
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+@-webkit-keyframes slideOutLeft {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
 }
 
 .slideOutLeft {
@@ -60,15 +86,14 @@ button{
     background: rgb(194,195,34);
     background: linear-gradient(180deg, rgba(194,195,34,1) 36%, rgba(253,205,45,1) 64%);
     display: grid;
-    grid-template-columns: 1fr 0.5fr;
+    grid-template-columns: 0.5fr 1fr;
     grid-auto-rows: minmax(150px, auto);
     grid-template-areas:
-    "header nav";
+    "nav header";
 }
 
 .head-title{
     grid-area: header;
-    margin-left: 2px;
 }
 
 .head-title h1{
@@ -87,6 +112,7 @@ button{
 
 .main-nav li{
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .main-nav a{
