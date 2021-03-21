@@ -1,11 +1,64 @@
+/* || UNIVERSAL || */
+
+*{
+  box-sizing: border-box;
+}
+
+button{
+    all: unset;
+}
+
 /* || ANIMATIONS || */
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+
+.slideOutLeft {
+  -webkit-animation-name: slideOutLeft;
+  animation-name: slideOutLeft;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 
 /* || LAYOUT PAGE || */
 
 .main-container{
     height: 100vh;
     background: rgb(194,195,34);
-    background: linear-gradient(180deg, rgba(194,195,34,1) 36%, rgba(253,205,45,1) 94%);
+    background: linear-gradient(180deg, rgba(194,195,34,1) 36%, rgba(253,205,45,1) 64%);
     display: grid;
     grid-template-columns: 1fr 0.5fr;
     grid-auto-rows: minmax(150px, auto);
@@ -26,7 +79,7 @@
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.main-nav ul{
+.nav-list{
     grid-area: nav;
     list-style-type: none;
     margin-top: 30px;
@@ -46,7 +99,18 @@
     color: yellow;
 }
 
-.main-nav{
+#display-none{
     display: none;
 }
 
+.btn::before{
+    content:"---";
+}
+
+.btn::after{
+    content:"--";
+}
+
+.menu-img{
+    width: 30px;
+}

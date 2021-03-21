@@ -20,7 +20,8 @@
         </header>
 
         <nav class="main-nav">
-            <ul>
+            <button id="btn"><img class="menu-img" src="{% static 'images/menu.png' %}" alt="menu image"></button>
+            <ul id="display-none" class="nav-list">
                 <li><a href="{% url 'sell:home' %}">Home</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="#">About</a></li>
