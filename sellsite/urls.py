@@ -21,6 +21,6 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path("favicon", RedirectView.as_view(url=staticfiles_storage.url("images/favicon.ico"))),
+    path("favicon", RedirectView.as_view(url=staticfiles_storage.url("images/favicon.ico"))),
     path('', include('sell.urls')),
 ]
