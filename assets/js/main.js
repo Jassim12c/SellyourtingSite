@@ -14,7 +14,7 @@ btn.addEventListener('click', ()=>{
     nav.classList.add('slideInLeft');
     mainNav.style.backgroundColor = "rgb(255, 255, 255, 0.2)";
     mainNav.replaceChild(navShownButton, btn);
-    header.style.marginLeft = "25px";
+    header.style.marginLeft = "2.5em";
     nav.classList.remove('slideOutLeft');
     navShownButton.classList.add('rotate');
 })
@@ -25,6 +25,6 @@ navShownButton.addEventListener('click', () => {
     mainNav.replaceChild(btn, navShownButton);
     nav.classList.add('animated');
     nav.classList.add('slideOutLeft');
-    header.style.marginLeft = "-25px";
+    header.style.marginLeft = "2.5em";
     btn.classList.add('rotateReverse');
 })
