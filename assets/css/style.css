@@ -118,7 +118,7 @@ button{
 
 .head-title{
     grid-area: header;
-    margin-right: 25px;
+    margin-right: 2.5em;
 }
 
 .head-title h1{
